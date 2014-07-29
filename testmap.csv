@@ -1,0 +1,7 @@
+c,Portland,-71.665279,121.498751,1500000
+c,Corvallis,-109.000833,46.669442,55000
+r,Portland,Corvallis
+c,_1,-165.162365,52.997502,0
+r,Corvallis,_1
+c,Eugene,-115.328893,-9.333888,150000
+r,Corvallis,Eugene
