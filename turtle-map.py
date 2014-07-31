@@ -18,16 +18,16 @@ class City(object):
     global master_city
     master_city.append(self)
 
-  def getx():
+  def getx(self):
     return self.xcoord
 
-  def gety():
+  def gety(self):
     return self.ycoord
 
-  def getname():
+  def getname(self):
     return self.name
 
-  def getpop():
+  def getpop(self):
     return self.pop
 
 # Road Class
@@ -55,16 +55,13 @@ def city_circle(city):
   turtle.penup()
   turtle.setx(city.xcoord)
   turtle.sety(city.ycoord)
-  #citypop = city.getpop()
-  #if citypop > 0 and citypop < 90001:
-  #if city.getpop() > 0 and city.getpop() < 90001:
-  if city.pop > 0 and city.pop < 90001:
+  if city.getpop() > 0 and city.getpop() < 90001:
     turtle.setx(turtle.xcor() + 2)
     turtle.pendown()
     turtle.circle(2)
     turtle.penup()
     turtle.setx(turtle.xcor() - 2)
-  if city.pop > 90000:
+  if city.getpop() > 90000:
     turtle.setx(turtle.xcor() + 3)
     turtle.pendown()
     turtle.begin_fill()
@@ -75,10 +72,10 @@ def city_circle(city):
 
 # Print City Name
 def city_name(city):
-  if city.name[0] != "_":
+  if city.getname()[0] != "_":
     turtle.setx(turtle.xcor() + 10)
     turtle.sety(turtle.ycor() - 2)
-    turtle.write(city.name, align="left")
+    turtle.write(city.getname(), align="left")
 
 # Draw a Road
 def draw_road(road):
@@ -87,14 +84,14 @@ def draw_road(road):
   endx = 0
   endy = 0
   for city in master_city:
-    if road.start == city.name:
-      print("Start City:", city.name)
-      startx = city.xcoord
-      starty = city.ycoord
-    if road.end == city.name:
-      print("End City:", city.name)
-      endx = city.xcoord
-      endy = city.ycoord
+    if road.start == city.getname():
+      print("Start City:", city.getname())
+      startx = city.getx()
+      starty = city.gety()
+    if road.end == city.getname():
+      print("End City:", city.getname())
+      endx = city.getx()
+      endy = city.gety()
   turtle.goto(startx, starty)
   turtle.pendown()
   turtle.goto(endx, endy)
