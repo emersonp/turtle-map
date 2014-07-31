@@ -1,6 +1,5 @@
 import turtle
 import sys
-import fileinput
 import getopt
 import csv
 
