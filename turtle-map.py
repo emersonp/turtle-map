@@ -5,7 +5,6 @@ import getopt
 import csv
 
 master_city = []
-TESTING = True
 
 # CLASSES
 # City Class
