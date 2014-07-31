@@ -55,6 +55,9 @@ def city_circle(city):
   turtle.penup()
   turtle.setx(city.xcoord)
   turtle.sety(city.ycoord)
+  #citypop = city.getpop()
+  #if citypop > 0 and citypop < 90001:
+  #if city.getpop() > 0 and city.getpop() < 90001:
   if city.pop > 0 and city.pop < 90001:
     turtle.setx(turtle.xcor() + 2)
     turtle.pendown()
